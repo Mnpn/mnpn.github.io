@@ -100,12 +100,11 @@ ul input {
 }
 
 .page {
-	height: 100vh;
+	min-height: 100vh;
 	width: 80%;
 	margin: 0 auto;
 	position: relative;
 	background-color: #161616;
-	/*transition: width 1s;*/
 }
 
 @keyframes bg {
@@ -156,6 +155,14 @@ ul input {
 	padding: 16px;
 	margin: 0;
 	padding-top: 0;
+}
+
+/* Really lazy work-around. It works. */
+.forcebottom {
+	position: absolute;
+	width: 100%;
+	bottom: 5px;
+	text-align: center;
 }
 
 .midline {
