@@ -2,6 +2,8 @@
 layout: default
 ---
 
+<noscript><style> .settings { display: none } </style></noscript>
+
 <h1>This is a test</h1>
 <h1>Hello World!</h1>
 <h1>Interesting.</h1>
@@ -10,3 +12,49 @@ layout: default
 <h1>neat!<br />
 pretty cool.</h1>
 <h1>I am <b>BOLD</b></h1>
+
+
+<h2>Settings</h2>
+<div class="short"><hr /></div>
+<h3><noscript>This feature requires JavaScript!</noscript></h3>
+<div class="settings">
+	<h3>
+		This website uses some bright colours.<br />
+		You can change them or revert back to the old look here.<br />
+	</h3>
+
+	<fieldset>
+		<legend>Select you colour scheme:</legend>
+		<form id="colours">
+			<ul>
+				<li><input type="color" id="primary" value="{{ site.primary }}" />Primary Colour</li>
+				<li><input type="checkbox" id="style" />Old design</li>
+			</ul>
+			<p><small><i>Some changes may not take effect until saved.</i></small></p>
+			<input type="reset" />
+			<input type="submit" value="Save & Update" />
+		</form>
+	</fieldset>
+</div>
+
+<script>
+let primary = document.getElementById("primary");
+let style = document.getElementById("style");
+
+{ let value = localStorage.getItem("primary"); if (value != null) { primary.value = value }}
+{ let value = localStorage.getItem("style"); if (value != null) { style.checked = (value === "true") }}
+
+let colours = document.getElementById("colours");
+colours.onsubmit = function() {
+	console.log(style.checked)
+	localStorage.setItem("primary", primary.value); setPrimary(primary.value);
+	localStorage.setItem("style", style.checked);
+	location.reload();
+	return false;
+};
+colours.onreset = function() {
+	localStorage.removeItem("primary"); setPrimary("{{ site.primary }}")
+	localStorage.removeItem("style");
+	location.reload();
+}
+</script>
