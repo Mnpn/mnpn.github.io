@@ -17,20 +17,30 @@ layout: default
 <h2>Actively maintained projects</h2>
 <div class="short"><hr /></div>
 
+<style type="text/css">
+	.Ruby:hover > .entry { border-bottom: 2px solid red }
+	.CSS:hover > .entry { border-bottom: 2px solid purple }
+	.Rust:hover > .entry { border-bottom: 2px solid orange }
+	.Swift:hover > .entry { border-bottom: 2px solid yellow }
+	.Java:hover > .entry { border-bottom: 2px solid brown }
+	.Go:hover > .entry { border-bottom: 2px solid blue }
+	.HTML:hover > .entry {border-bottom: 2px solid blue }
+</style>
+
 {% for repo in site.github.public_repositories %}
 	{% unless repo.fork %}
 	{% unless site.data.unmaintained contains repo.name %}
-		<div class="entry-wrapper">
+		<div class="entry-wrapper {{ repo.language }}">
 			<div class="entry">
 				<div class="title">
 					<span>{{ repo.name }}</span>
 					<i class="material-icons">star</i>{{ repo.stargazers_count }}
 					<br />
 					<a href="{{ repo.html_url }}/releases/latest">
-						<i class="material-icons">file_download</i>
+						<i class="material-icons {{ repo.language }}">file_download</i>
 					</a>
 					<a href="{{ repo.html_url }}">
-						<i class="material-icons">code</i>
+						<i class="material-icons {{ repo.language }}">code</i>
 					</a>
 				</div>
 				<h4 class="description">{{ repo.description }}</h4>
@@ -53,7 +63,7 @@ layout: default
 <div class="short"><hr /></div>
 {% for repo in site.github.public_repositories %}
 	{% if site.data.unmaintained contains repo.name %}
-		<div class="entry-wrapper">
+		<div class="entry-wrapper {{ repo.language }}">
 			<div class="entry">
 				<div class="title">
 					<span>{{ repo.name }}</span>
@@ -73,4 +83,4 @@ layout: default
 		</div>
 	{% endif %}
 {% endfor %}
-<div class="short" style="padding-bottom: 25px"><hr /></div>
+<div class="short" style="padding-bottom: 10px"><hr /></div>

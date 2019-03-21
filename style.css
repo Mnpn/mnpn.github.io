@@ -108,15 +108,9 @@ ul input {
 }
 
 @keyframes bg {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+	0% { background-position: 0% 50%; }
+	50% { background-position: 100% 50%; }
+	100% { background-position: 0% 50%; }
 }
 
 /* Software */
@@ -184,6 +178,10 @@ ul input {
 	color: grey;
 }
 
+i.material-icons {
+	vertical-align: bottom;
+}
+
 .short {
 	width: 35%;
 	position: relative;
@@ -203,5 +201,6 @@ fieldset {
 	}
 	.page {
 		width: 100%;
+		transition: width 1s;
 	}
 }
