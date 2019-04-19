@@ -1,6 +1,6 @@
-# Mnpn's Website [![Donate](https://img.shields.io/badge/Donate-PayPal-blue.svg?style=flat-square)](https://paypal.me/mnpn03/)
+# Mnpn's Website [![Donate](https://img.shields.io/badge/Donate-PayPal-blue.svg?style=flat-square)](https://paypal.me/mnpn03/) [![Netlify Status](https://api.netlify.com/api/v1/badges/e6f37104-d025-4b17-8699-cb1a2caddd08/deploy-status)](https://app.netlify.com/sites/mnpn/deploys)
 
-[Mnpn.TBA](https://mnpn.TBA/) is my personal website containing my projects and contact information.
+[Mnpn.me](https://mnpn.me/) is my personal website containing my projects and contact information.
 
 ### Table of Content
 - [Running Locally](#running-locally)
@@ -36,4 +36,4 @@ Following these short guidelines will make it easier and faster for your Issue/P
 Thanks!
 
 ### License
-Mnpn.TBA a public website that comes with no warranty. It is licensed under the GNU GPL license. Read more about the license used [here](https://github.com/Mnpn03/Website/blob/Mnpn/LICENSE).
+Mnpn.me a public website that comes with no warranty. It is licensed under the GNU GPL license. Read more about the license used [here](https://github.com/Mnpn03/Website/blob/Mnpn/LICENSE).
