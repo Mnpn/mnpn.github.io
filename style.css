@@ -3,7 +3,7 @@ body {
 	color: #d1d1d1;
 	font-family: Ubuntu,Roboto,Helvetica,sans-serif;
 	text-align: center;
-  	background: linear-gradient(275deg, #54bc8d, #ffff00, #0079d8);
+  	background: linear-gradient(275deg, #730fdd, #b200ff, #71099e);
 	background-size: 400%;
 	-webkit-animation: bg 20s ease infinite;
 	animation: bg 20s ease infinite;
