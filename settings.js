@@ -12,6 +12,6 @@ function setPrimary(value) {
 }
 
 window.onload = function() {
-	{ let value = localStorage.getItem("primary"); if (value != null) { setPrimary(value); } else { setPrimary("#0079d8"); }}
+	{ let value = localStorage.getItem("primary"); if (value != null) { setPrimary(value); } else { setPrimary("#b200ff"); }}
 	{ let value = localStorage.getItem("style"); if (value != null) { if (value == "true") { addCss(".page", "width", "100%"); } }}
 };

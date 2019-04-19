@@ -14,13 +14,12 @@ layout: default
 	<br />
 	You can find them under "<a href="/projects">Projects</a>"!
 	<br />
-	<div class="short"><hr /></div>
 	If you need to contact me, you can do so by visiting "<a href="/contact">Contact</a>".
 </h3>
 
-
-<h2>Settings</h2>
 <div class="short"><hr /></div>
+
+<h1>Settings</h1>
 <h3><noscript>This feature requires JavaScript!</noscript></h3>
 <div class="settings">
 	<h3>
@@ -29,7 +28,7 @@ layout: default
 	</h3>
 
 	<fieldset>
-		<legend>Select you colour scheme:</legend>
+		<legend>Select your colour scheme:</legend>
 		<form id="colours">
 			<ul>
 				<li><input type="color" id="primary" value="{{ site.primary }}" />Primary Colour</li>
@@ -41,6 +40,10 @@ layout: default
 		</form>
 	</fieldset>
 </div>
+
+<!-- This apparently fixes a bug, which is great because
+	I cba to do the proper CSS to fix this when I'm sick. -->
+<style> .page { padding-bottom: 1px; } </style>
 
 <script>
 let primary = document.getElementById("primary");

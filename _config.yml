@@ -19,7 +19,7 @@ email: contact@mnpn.me
 description: >- # this means to ignore newlines until "baseurl:"
   Mnpn's website containing software and other projects.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://mnpn.TBA" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://mnpn.me" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: Mnpn03
 github_username: Mnpn03
 repository: Mnpn03/Website
