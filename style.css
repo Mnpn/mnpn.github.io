@@ -31,7 +31,6 @@ hr {
 
 header {
 	background: rgba(0, 0, 0, 0.4);
-	box-shadow: 0 4px 2px -1px black;
 	height: 64px;
 	position: relative;
 	border-top: 2px solid {{ site.primary }};
@@ -111,6 +110,15 @@ ul input {
 	0% { background-position: 0% 50%; }
 	50% { background-position: 100% 50%; }
 	100% { background-position: 0% 50%; }
+}
+
+/* Index */
+.fronticon {
+	width: 200px;
+	max-width: 90%;
+	height: auto;
+	margin-bottom: 20px;
+	box-shadow: 0 0 50px black;
 }
 
 /* Software */
