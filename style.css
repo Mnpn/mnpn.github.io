@@ -131,10 +131,24 @@ ul input {
 	width: 256px;
 }
 
+.other {
+	height: auto;
+}
+
+.otitle {
+	margin: 16px;
+	font-size: 20px;
+}
+
 .entry-wrapper {
 	margin: 17px;
 	display: inline-block;
 	height: 220px;
+	width: 256px;
+}
+
+.other-wrapper {
+	height: 60px;
 	width: 256px;
 }
 
@@ -149,7 +163,7 @@ ul input {
 	padding-bottom: 10px;
 }
 
-.entry .title span {
+.title span {
 	font-size: 24px;
 }
 
