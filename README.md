@@ -1,4 +1,4 @@
-# Mnpn's Website [![Donate](https://img.shields.io/badge/Donate-PayPal-blue.svg?style=flat-square)](https://paypal.me/mnpn03/) [![Netlify Status](https://api.netlify.com/api/v1/badges/e6f37104-d025-4b17-8699-cb1a2caddd08/deploy-status)](https://app.netlify.com/sites/mnpn/deploys)
+# Mnpn's Website [![Netlify Status](https://api.netlify.com/api/v1/badges/e6f37104-d025-4b17-8699-cb1a2caddd08/deploy-status)](https://app.netlify.com/sites/mnpn/deploys)
 
 [Mnpn.me](https://mnpn.me/) is my personal website containing my projects and contact information.
 
