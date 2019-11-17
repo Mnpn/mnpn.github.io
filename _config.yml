@@ -23,7 +23,7 @@ url: "https://mnpn.me" # the base hostname & protocol for your site, e.g. http:/
 twitter_username: Mnpn03
 github_username: Mnpn03
 repository: Mnpn03/Website
-primary: "#b200ff"
+primary: "#7b63e1"
 
 # Build settings
 markdown: kramdown

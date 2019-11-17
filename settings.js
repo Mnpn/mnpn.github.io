@@ -12,5 +12,5 @@ function setPrimary(value) {
 }
 
 window.onload = function() {
-	{ let value = localStorage.getItem("primary"); if (value != null) { setPrimary(value); } else { setPrimary("#b200ff"); }}
+	{ let value = localStorage.getItem("primary"); if (value != null) { setPrimary(value); } else { setPrimary("#7b63e1"); }}
 };
