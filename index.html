@@ -23,16 +23,15 @@ layout: default
 <h3><noscript>This feature requires JavaScript!</noscript></h3>
 <div class="settings">
 	<h3>
-		This website uses some bright colours.<br />
-		You can change them or revert back to the old look here.<br />
+		This website has a fancy colour theme.<br />
+		You can change it here.<br />
 	</h3>
 
 	<fieldset>
-		<legend>Select your colour scheme:</legend>
+		<legend>Select a custom colour:</legend>
 		<form id="colours">
 			<ul>
-				<li><input type="color" id="primary" value="{{ site.primary }}" />Primary Colour</li>
-				<li><input type="checkbox" id="style" />Old design</li>
+				<li><input type="color" id="primary" value="{{ site.primary }}" /></li>
 			</ul>
 			<input type="reset" />
 			<input type="submit" value="Save & Update" />
@@ -41,28 +40,19 @@ layout: default
 	</fieldset>
 </div>
 
-<!-- This apparently fixes a bug, which is great because
-	I cba to do the proper CSS to fix this when I'm sick. -->
-<style> .page { padding-bottom: 1px; } </style>
-
 <script>
 let primary = document.getElementById("primary");
-let style = document.getElementById("style");
 
 { let value = localStorage.getItem("primary"); if (value != null) { primary.value = value }}
-{ let value = localStorage.getItem("style"); if (value != null) { style.checked = (value === "true") }}
 
 let colours = document.getElementById("colours");
 colours.onsubmit = function() {
-	console.log(style.checked)
 	localStorage.setItem("primary", primary.value); setPrimary(primary.value);
-	localStorage.setItem("style", style.checked);
 	location.reload();
 	return false;
 };
 colours.onreset = function() {
 	localStorage.removeItem("primary"); setPrimary("{{ site.primary }}")
-	localStorage.removeItem("style");
 	location.reload();
 }
 </script>
