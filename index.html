@@ -10,7 +10,12 @@ layout: default
 </section>
 
 <section>
-	<h1>Projects</h1>
+	<div class="title">
+		<div class="line left-side"></div>
+		<h1>Projects</h1>
+		<div class="line right-side"></div>
+	</div>
+	Come inside, twist the knife, like it's something to do!
 	<div class="projects">
 		{% for repo in site.data.other_repos %}
 			<div class="project {{ repo.language }}">
@@ -32,7 +37,11 @@ layout: default
 </section>
 
 <section class="darkersection">
-	<h1>World of Warcraft</h1>
+	<div class="title">
+		<div class="line left-side"></div>
+		<h1>World of Warcraft</h1>
+		<div class="line right-side"></div>
+	</div>
 	Blinieth :^)<br>lul
 	<h4>AAAAAAAAAAAAAAAAA</h4>
 	<h3>AAAAAAAAAAAAAAAAAAAAAAAAAAAA</h3>
@@ -40,5 +49,5 @@ layout: default
 </section>
 
 <footer>
-	<h3>Mnpn {{ 'now' | date: "%Y" }}</h3><h3>Made with >:( in Sweden</h3>
+	<h3>Mnpn {{ 'now' | date: "%Y" }}</h3><p>Made with >:( in Sweden</p>
 </footer>
