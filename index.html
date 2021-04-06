@@ -1,0 +1,44 @@
+---
+layout: default
+---
+<section class="home">
+	<div class="aboutme">
+		<img src="/assets/gspfp.jpeg">
+		<h1>Welcome, I'm Mnpn!<a href="a">aa</a></h1>
+		<h4>AAAAAAAAAAAAAAAAAAAAAAa</h4>
+	</div>
+</section>
+
+<section>
+	<h1>Projects</h1>
+	<div class="projects">
+		{% for repo in site.data.other_repos %}
+			<div class="project {{ repo.language }}">
+				<h2><a href="{{ repo.url }}">{{ repo.name }}</a></h2>
+				<p>{{ repo.description }}</p>
+				<h4>{{ repo.language }}</h4>
+			</div>
+		{% endfor %}
+		{% for repo in site.github.public_repositories %}
+			{% if site.data.repositories contains repo.name %}
+				<div class="project {{ repo.language }}">
+					<h2><a href="{{ repo.html_url }}">{{ repo.name }}</a></h2>
+					<p>{{ repo.description }}</p>
+					<h4>{{ repo.language }}</h4>
+				</div>
+			{% endif %}
+		{% endfor %}
+	</div>
+</section>
+
+<section class="darkersection">
+	<h1>World of Warcraft</h1>
+	Blinieth :^)<br>lul
+	<h4>AAAAAAAAAAAAAAAAA</h4>
+	<h3>AAAAAAAAAAAAAAAAAAAAAAAAAAAA</h3>
+	AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.
+</section>
+
+<footer>
+	<h3>Mnpn {{ 'now' | date: "%Y" }}</h3><h3>Made with >:( in Sweden</h3>
+</footer>

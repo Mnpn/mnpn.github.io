@@ -1,0 +1,9 @@
+- url: https://github.com/ish-app/ish.app
+  name: ish.app
+  language: HTML
+  description: "The website for iSH, the Linux shell for iOS! Visit it <a href=\"https://ish.app\">here</a>."
+
+- url: https://github.com/discordconsole-team/DiscordConsole
+  name: DiscordConsole
+  language: Go
+  description: "Control your Discord and Discord bot accounts (webhooks, too!) through the command line."

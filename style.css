@@ -1,0 +1,136 @@
+:root {
+	--link-colour: red;
+}
+
+body {
+	background-color: #161616;
+	color: #fff;
+	font-family: Ubuntu, Roboto, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	font-size: 20pt;
+	color: inherit;
+	padding: 12px 0 12px 0;
+	margin: 0;
+}
+
+hr {
+	border: 0;
+	border-top: 1px solid grey;
+	margin: 15px;
+}
+
+header {
+	border-top: 2px solid #fff;
+}
+
+a {
+	text-decoration: none;
+	color: var(--link-colour);
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+section, footer {
+	padding: 0 20px 0 20px;
+}
+
+.darkersection {
+	background-color: #0f0f0f;
+}
+
+/* hero thing */
+.home {
+	height: 300px;
+	background-color: #2f2a3b;
+}
+
+.home img {
+	width: 128px;
+	height: auto;
+}
+
+/* project section */
+.CSS:hover			{ color: #563d7c; border-bottom: 2px solid #563d7c }
+.Go:hover 			{ color: #00add8; border-bottom: 2px solid #00add8 }
+.HTML:hover 		{ color: #e34c26; border-bottom: 2px solid #e34c26 }
+.Java:hover 		{ color: #b07219; border-bottom: 2px solid #b07219 }
+.JavaScript:hover 	{ color: #f1e05a; border-bottom: 2px solid #f1e05a }
+.Ruby:hover 		{ color: #701516; border-bottom: 2px solid #701516 }
+.Rust:hover 		{ color: #dea584; border-bottom: 2px solid #dea584 }
+.Shell:hover 		{ color: #89e051; border-bottom: 2px solid #89e051 }
+
+.projects {
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	text-align: center;
+}
+
+.project {
+	border: 2px solid #000;
+	height: 220px;
+	transition: .15s box-shadow ease-out, .15s color ease-out, .15s border-bottom ease-out;
+	width: 256px;
+	display: flex;
+	flex-direction: column;
+	margin: 16px;
+}
+
+.project:hover {
+	box-shadow: 0 0 50px #000;
+}
+
+.project h2 {
+	border-bottom: 2px solid #000;
+	margin: 0 24px 0 24px;
+	padding: 16px 0 12px 0;
+}
+
+.project h2 a {
+	color: #fff;
+
+}
+
+.project h2 a {
+	text-decoration: none;
+	transition: color .15s;
+}
+
+.project h2 a:hover { /* language colour on hover */
+	color: inherit;
+}
+
+.project p {
+	flex-grow: 2;
+	padding: 0 8px 0 8px;
+	color: #fff;
+}
+
+footer {
+	display: flex;
+	justify-content: space-between;
+	color: grey;
+}
+
+/* light theme */
+@media (prefers-color-scheme: light) {
+	body {
+		background-color: #f1f1f1;
+		color: #000;
+	}
+
+	.darkersection {
+		background-color: #fff;
+	}
+
+	.project p, .project h2 a {
+		color: #000;
+	}
+}
