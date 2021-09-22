@@ -164,8 +164,8 @@ section, footer {
 }
 
 /* wow section */
-.demon_hunter	{ color: #6a117b }
-.druid			{ color: #e34c26 }
+.demon_hunter a	{ color: #6a117b }
+.druid a		{ color: #e34c26 }
 
 .charcontainer {
 	display: flex;
@@ -186,10 +186,6 @@ section, footer {
 .charbox img {
 	height: 160px;
 	width: auto;
-}
-
-.charbox a {
-	color: inherit;
 }
 
 footer {
