@@ -2,13 +2,8 @@
 
 [Mnpn.dev](https://mnpn.dev/) is my personal website containing my projects and contact information.
 
-### Table of Content
-- [Running Locally](#running-locally)
-- [Contribution](#contribution)
-- [License](#license)
-
 ### Running Locally
-If you're going to create a [Pull Request](https://github.com/Mnpn03/Website/pulls), you might want to check how your changes look. As I use Jekyll, you can not simply open the index file in your browser.
+If you're going to create a [PR](https://github.com/Mnpn/Website/pulls), you might want to check how your changes look. As I use Jekyll, you can not simply open the index file in your browser.
 
 **Here's what you'll have to do:**
 
@@ -22,14 +17,6 @@ Then, you can navigate to `127.0.0.1:4000` in your browser, and see your local c
 The website automatically updates when a file is saved because you supplied Jekyll with the `serve` argument.
 
 ### Contribution
-To contribute to the project, simply create a [Pull Request](https://github.com/Mnpn03/Website/pulls) or an [Issue](https://github.com/Mnpn03/Website/issues).
+To contribute to the project, simply create a [pull request](https://github.com/Mnpn/Website/pulls) or an [issue](https://github.com/Mnpn/Website/issues).
 
-If you want to create an [Issue](https://github.com/Mnpn03/Website/issues), please clearly state the bug and/or ways to replicate it (if it's a bug/glitch/exploit).
-
-If you want to create a [Pull Request](https://github.com/Mnpn03/Website/pulls), please clearly state what you've changed and if it has resolved an issue, and if so - which one. Don't forget to check "[Running Locally](#running-locally)".
-
-Following these short guidelines will make it easier and faster for your Issue/Pull Request to be reviewed and dealt with.
-Thanks!
-
-### License
-Mnpn.me a public website that comes with no warranty. It is licensed under the X license. Read more about the license used [here](https://github.com/Mnpn03/Website/blob/Mnpn/LICENSE).
+If you want to create an [issue](https://github.com/Mnpn/Website/issues), please clearly state the bug and/or ways to replicate it (if it's a bug/glitch/exploit).
