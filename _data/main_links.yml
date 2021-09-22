@@ -1,0 +1,19 @@
+- url: "https://github.com/Mnpn"
+  title: "GitHub"
+  external: true
+
+- url: "https://twitter.com/Mnpn03"
+  title: "Twitter"
+  external: true
+
+- url: "mailto:kattsylt@mnpn.dev"
+  title: "E-mail"
+  external: false
+
+- url: "https://twitter.com/Mnpn03"
+  title: "Internal Test"
+  external: false
+
+- url: "https://twitter.com/Mnpn03"
+  title: "External Test"
+  external: true

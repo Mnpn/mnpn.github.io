@@ -1,13 +1,29 @@
 :root {
-	--link-colour: red;
+	--theme-colour: #34a8eb;
+	--background: #0f0f0f;
 }
 
 body {
-	background-color: #161616;
+	background-color: var(--background);
 	color: #fff;
 	font-family: Ubuntu, Roboto, sans-serif;
 	margin: 0;
 	padding: 0;
+	overflow: hidden;
+	display: flex;
+	flex-direction: row;
+	height: 100vh;
+}
+
+.content {
+	overflow-y: auto;
+	min-height: 0px;
+	border-top: 2px solid var(--theme-colour);
+	margin: 26px 26px 0px 26px;
+	box-shadow: 0px 0px 20px 1px #000000;
+	background-color: #161616;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
 }
 
 h1 {
@@ -29,7 +45,7 @@ header {
 
 a {
 	text-decoration: none;
-	color: var(--link-colour);
+	color: var(--theme-colour);
 }
 
 a:hover {
@@ -42,14 +58,14 @@ section, footer {
 }
 
 .darkersection {
-	background-color: #0f0f0f;
+	background-color: var(--background);
 }
 
 .title { display: flex; }
 .title h1 { margin: 0 16px 0 16px; }
 
 .line {
-	border-top: 2px solid grey;
+	border-top: 2px solid #383838;
 	margin: 28px;
 	flex-grow: 1;
 }
@@ -60,14 +76,33 @@ section, footer {
 
 /* hero thing */
 .home {
-	height: 300px;
-	background-color: #2f2a3b;
-	border-top: 2px solid red;
+	min-width: 250px;
+	background-color: #161616;
+	border-top: 2px solid var(--theme-colour);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	border-top-right-radius: 15px;
+	margin: 26px 6.5px 0 0;
+	box-shadow: 0px 0px 20px 1px #000000;
+}
+
+.aboutme {
+	/*margin-top: 28px;*/
 }
 
 .home img {
+	display: block;
 	width: 128px;
 	height: auto;
+	margin: 20px auto;
+	border: 2px solid var(--theme-colour);
+}
+
+.bottomnote {
+	text-align: center;
+	color: grey;
+	user-select: none;
 }
 
 /* project section */
@@ -92,7 +127,7 @@ section, footer {
 	border: 2px solid #000;
 	height: 220px;
 	transition: .15s box-shadow ease-out, .15s color ease-out, .15s border-bottom ease-out;
-	width: 256px;
+	width: 250px;
 	display: flex;
 	flex-direction: column;
 	margin: 16px;
@@ -128,6 +163,35 @@ section, footer {
 	color: #fff;
 }
 
+/* wow section */
+.demon_hunter	{ color: #6a117b }
+.druid			{ color: #e34c26 }
+
+.charcontainer {
+	display: flex;
+	padding-bottom: 14px;
+	justify-content: center;
+}
+
+.charbox {
+	display: flex;
+	width: 500px;
+	max-width: 500px;
+	height: 160px;
+	background-color: #161616;
+	margin: 16px;
+	padding: 12px;
+}
+
+.charbox img {
+	height: 160px;
+	width: auto;
+}
+
+.charbox a {
+	color: inherit;
+}
+
 footer {
 	display: flex;
 	align-items: center;
@@ -142,17 +206,54 @@ footer {
 		color: #000;
 	}
 
+	.content {
+		background-color: #f1f1f1;
+		box-shadow: 0px 0px 20px 1px #a1a1a1;
+	}
+
+	.home {
+		background-color: #fff;
+		box-shadow: 0px 0px 20px 1px #a1a1a1;
+	}
+
 	.darkersection {
 		background-color: #fff;
 	}
 
+	.project {
+		background-color: #161616;
+		color: #fff;
+	}
 	.project p, .project h2 a {
-		color: #000;
+		color: #fff;
+	}
+	#lang {
+		color: inherit;
 	}
 }
 
 /* mobile */
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 700px) {
+	body {
+		flex-direction: column;
+		overflow: auto;
+		height: 100%;
+	}
+	.home {
+		background-color: var(--background);
+		border: none;
+		flex-direction: row;
+		align-items: flex-end;
+		box-shadow: none;
+		margin: 0;
+	}
+	.content {
+		overflow: hidden;
+		margin: 0;
+	}
+	.aboutme {
+		margin-top: 0;
+	}
 	.left-side {
 		display: block;
 	}

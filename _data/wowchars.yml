@@ -1,0 +1,9 @@
+- armoury: https://worldofwarcraft.com/en-gb/character/eu/argent-dawn/blinieth
+  name: Blinieth
+  class: demon_hunter
+  class_crest: /assets/wow/demon_hunter_crest.png
+
+- armoury: https://worldofwarcraft.com/en-gb/character/eu/argent-dawn/venerith
+  name: Venerith
+  class: druid
+  class_crest: /assets/wow/druid_crest.png

@@ -3,51 +3,70 @@ layout: default
 ---
 <section class="home">
 	<div class="aboutme">
+		<div class="title">
+			<div class="line left-side"></div>
+			<h1>Hi, I'm Mnpn!</h1>
+			<div class="line right-side"></div>
+		</div>
+		<h4>I am bla bla and I do bla bla, sometimes I bla bla about bla bla but that's about it.</h4>
+		<h4>This page is super duper unfinished and should probably not even be live</h4>
+		{% for link in site.data.main_links %}
+		<h2><a href="{{ link.url }}" {% if link.external %}target="_blank"{% endif %}>{{ link.title }} {% if link.external %}&UpperRightArrow;{% endif %}</a></h2>
+		{% endfor %}
+	</div>
+	<div class="bottomnote">
 		<img src="/assets/gspfp.jpeg">
-		<h1>Welcome, I'm Mnpn!<a href="a">aa</a></h1>
-		<h4>AAAAAAAAAAAAAAAAAAAAAAa</h4>
+		<h4>&#8212; &#183; &#8212;</h4>
 	</div>
 </section>
 
-<section>
-	<div class="title">
-		<div class="line left-side"></div>
-		<h1>Projects</h1>
-		<div class="line right-side"></div>
-	</div>
-	Come inside, twist the knife, like it's something to do!
-	<div class="projects">
-		{% for repo in site.data.other_repos %}
-			<div class="project {{ repo.language }}">
-				<h2><a href="{{ repo.url }}">{{ repo.name }}</a></h2>
-				<p>{{ repo.description }}</p>
-				<h4>{{ repo.language }}</h4>
-			</div>
-		{% endfor %}
-		{% for repo in site.github.public_repositories %}
-			{% if site.data.repositories contains repo.name %}
+<div class="content">
+	<section>
+		<div class="title">
+			<div class="line left-side"></div>
+			<h1>Projects</h1>
+			<div class="line right-side"></div>
+		</div>
+		<div class="projects">
+			{% for repo in site.data.other_repos %}
 				<div class="project {{ repo.language }}">
-					<h2><a href="{{ repo.html_url }}">{{ repo.name }}</a></h2>
+					<h2><a href="{{ repo.url }}">{{ repo.name }}</a></h2>
 					<p>{{ repo.description }}</p>
 					<h4>{{ repo.language }}</h4>
 				</div>
-			{% endif %}
-		{% endfor %}
-	</div>
-</section>
+			{% endfor %}
+			{% for repo in site.github.public_repositories %}
+				{% if site.data.repositories contains repo.name %}
+					<div class="project {{ repo.language }}">
+						<h2><a href="{{ repo.html_url }}">{{ repo.name }}</a></h2>
+						<p>{{ repo.description }}</p>
+						<h4 id="lang">{{ repo.language }}</h4>
+					</div>
+				{% endif %}
+			{% endfor %}
+		</div>
+	</section>
 
-<section class="darkersection">
-	<div class="title">
-		<div class="line left-side"></div>
-		<h1>World of Warcraft</h1>
-		<div class="line right-side"></div>
-	</div>
-	Blinieth :^)<br>lul
-	<h4>AAAAAAAAAAAAAAAAA</h4>
-	<h3>AAAAAAAAAAAAAAAAAAAAAAAAAAAA</h3>
-	AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.
-</section>
+	<section class="darkersection">
+		<div class="title">
+			<div class="line left-side"></div>
+			<h1>World of Warcraft</h1>
+			<div class="line right-side"></div>
+		</div>
+		<div class="charcontainer">
+			{% for char in site.data.wowchars %}
+				<div class="charbox">
+					<img src="{{ char.class_crest }}">
+					<div class="charinfo">
+						<h1 class="{{ char.class }}"><a href="{{ char.armoury }}">{{ char.name }}</a></h1>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+		<!-- <h3><a href="/wow">WoW patch tracker</a></h3> -->
+	</section>
 
-<footer>
-	<h3>Mnpn {{ 'now' | date: "%Y" }}</h3><p>Made with >:( in Sweden</p>
-</footer>
+	<footer>
+		<h3>Mnpn {{ 'now' | date: "%Y" }}</h3><p>Made with >:( in Sweden</p>
+	</footer>
+</div>
