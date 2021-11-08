@@ -260,3 +260,19 @@ footer {
 		margin: 28px 12px 28px 12px;
 	}
 }
+
+@media only screen and (min-width: 700px) { /* don't put a background on mobile */
+	body:before {
+		height: 100%;
+		content: "";
+		position: fixed;
+		left: 0;
+		right: 0;
+		z-index: -1;
+		background-image: url("/wow915live/ardenweald.jpeg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		filter: blur(6px);
+	}
+}
