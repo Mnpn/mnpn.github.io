@@ -24,6 +24,7 @@ body {
 	background-color: #161616;
 	border-top-left-radius: 15px;
 	border-top-right-radius: 15px;
+	flex-grow: 1; /* in case there's not enough repos */
 }
 
 h1 {
@@ -77,6 +78,7 @@ section, footer {
 /* hero thing */
 .home {
 	min-width: 250px;
+	max-width: 400px;
 	background-color: #161616;
 	border-top: 2px solid var(--theme-colour);
 	display: flex;
@@ -163,29 +165,33 @@ section, footer {
 	color: #fff;
 }
 
-/* wow section */
-.demon_hunter a	{ color: #6a117b }
-.druid a		{ color: #e34c26 }
+/* anime section */
+.yellow a { color: #fcf088 }
 
-.charcontainer {
+.animecontainer {
 	display: flex;
 	padding-bottom: 14px;
 	justify-content: center;
 }
 
-.charbox {
+.animebox {
 	display: flex;
-	width: 500px;
-	max-width: 500px;
+	width: 550px;
+	max-width: 550px;
 	height: 160px;
 	background-color: #161616;
 	margin: 16px;
 	padding: 12px;
 }
 
-.charbox img {
+.animebox h1 {
+	padding: 0;
+}
+
+.animebox img {
 	height: 160px;
 	width: auto;
+	margin-right: 12px;
 }
 
 footer {
@@ -258,6 +264,9 @@ footer {
 	}
 	.line {
 		margin: 28px 12px 28px 12px;
+	}
+	.animecontainer {
+		flex-direction: column;
 	}
 }
 

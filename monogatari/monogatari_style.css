@@ -1,0 +1,60 @@
+:root {
+	--theme-colour: #ffaf00;
+	--background: #0f0f0f;
+}
+
+body {
+	background-color: var(--background);
+	color: #fff;
+	display: flex;
+	justify-content: center;
+}
+
+.content {
+	max-width: 1224px;
+}
+
+a {
+	color: var(--theme-colour);
+}
+
+.tracks {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	text-align: center;
+}
+
+.track {
+	background-color: #000;
+	border-radius: 15px;
+	width: 570px;
+	padding: 0 3px 5px 3px;
+	margin: 0 6px 12px 6px;
+	border: 2px solid #262626;
+}
+
+/* override light theme */
+@media (prefers-color-scheme: light) {
+	.content {
+		background-color: var(--background);
+		color: #fff;
+		box-shadow: 0px 0px 20px 1px #000000;
+	}
+}
+
+/* mobile */
+@media only screen and (max-width: 700px) {
+	.rem-mob { display: none }
+}
+
+@media only screen and (max-width: 1276px) {
+	.tracks { flex-direction: column }
+}
+
+@media only screen and (min-width: 700px) { /* don't put a background on mobile */
+	body:before {
+		background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/69dfb87f-f303-4c66-89c4-d94eda4a6510/dc7dqvu-39325408-e8aa-494e-8a33-923a860753e7.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzY5ZGZiODdmLWYzMDMtNGM2Ni04OWM0LWQ5NGVkYTRhNjUxMFwvZGM3ZHF2dS0zOTMyNTQwOC1lOGFhLTQ5NGUtOGEzMy05MjNhODYwNzUzZTcucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.DFT7AHVtb0HiIVXwHM_qIHCHJz-EahZmuBItK_Q7_Mk");
+		filter: blur(0px);
+	}
+}

@@ -50,16 +50,16 @@ layout: default
 	<section class="darkersection">
 		<div class="title">
 			<div class="line left-side"></div>
-			<h1>World of Warcraft</h1>
+			<h1>Anime Recommendations</h1>
 			<div class="line right-side"></div>
 		</div>
-		<div class="charcontainer">
-			{% for char in site.data.wowchars %}
-				<div class="charbox">
-					<img src="{{ char.class_crest }}">
-					<div class="charinfo">
-						<h1 class="{{ char.class }}"><a href="{{ char.armoury }}">{{ char.name }}</a></h1>
-						<p class="{{ char.class }}">(temp placement) <a href="/wow">Patch tracker</a></p>
+		<div class="animecontainer">
+			{% for anime in site.data.anime %}
+				<div class="animebox">
+					<img src="{{ anime.cover }}">
+					<div class="animeinfo">
+						<h1 class="{{ anime.colour }}"><a href="{{ anime.link }}">{{ anime.title }}</a></h1>
+						<p>{{ anime.description }}</p>
 					</div>
 				</div>
 			{% endfor %}
