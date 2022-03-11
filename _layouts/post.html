@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>{{ site.title }} | Blog</title>
+		<link rel="stylesheet" href="/blog.css" />
+        
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="shortcut icon" type="image/png" href="/assets/icon.png"/>
+
+		<meta name="description" content="{{ site.description }}">
+		<meta property="og:image" content="/assets/gspfp.jpeg" />
+		<meta property="og:url" content="{{ site.url }}" />
+		<meta property="og:title" content="{{ site.title }}" />
+		<meta property="og:description" content="{{ site.description }}" />
+		<meta property="og:type" content="website" />
+		<meta property="og:locale" content="en_GB" />
+		<meta name="theme-color" content="#ba3a34">
+
+		<link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<header>
+			<nav>
+				<div class="title">
+					<h1 class="rem-mob"><a href="/">Home</a></h1>
+					<div class="line right-side"></div>
+					<h1>Blog</h1>
+					<div class="line left-side"></div>
+				</div>
+			</nav>
+		</header>
+		<div class="content">
+			<h1>{{ page.title }}</h1>
+			<p class="desc">{{ page.created }}{% if page.updated %}, last updated on {{ page.updated }}{% endif %}</p>
+			{{ content }}
+		</div>
+	</body>
+</html>

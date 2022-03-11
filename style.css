@@ -1,5 +1,5 @@
 :root {
-	--theme-colour: #34a8eb;
+	--theme-colour: #ba3a34; /* 34a8eb */
 	--background: #0f0f0f;
 }
 
@@ -16,6 +16,8 @@ body {
 }
 
 .content {
+	display: flex;
+	flex-direction: column;
 	overflow-y: auto;
 	min-height: 0px;
 	border-top: 2px solid var(--theme-colour);
@@ -60,6 +62,11 @@ section, footer {
 
 .darkersection {
 	background-color: var(--background);
+	padding-bottom: 2px; /* otherwise the footer eats into it? :HUHTao: */
+}
+
+.growsmost {
+	flex-grow: 1;
 }
 
 .title { display: flex; }
@@ -165,33 +172,42 @@ section, footer {
 	color: #fff;
 }
 
-/* anime section */
-.yellow a { color: #fcf088 }
-
-.animecontainer {
+.blogpostpreview {
 	display: flex;
-	padding-bottom: 14px;
-	justify-content: center;
-}
-
-.animebox {
-	display: flex;
-	width: 550px;
-	max-width: 550px;
-	height: 160px;
 	background-color: #161616;
-	margin: 16px;
-	padding: 12px;
+	border-radius: 8px;
+	border: 2px solid #262626;
+	transition: .05s border ease-out;
+	margin: 0 auto;
+	margin-bottom: 12px;
+	max-width: 800px;
 }
 
-.animebox h1 {
-	padding: 0;
+.blogpostpreview:hover {
+	border: 2px solid var(--theme-colour);
 }
 
-.animebox img {
-	height: 160px;
-	width: auto;
-	margin-right: 12px;
+.blogpostpreview p {
+	padding: 0 12px 0 12px;
+	margin: 0;
+}
+
+.blogpostpreview a, .postdate {
+	line-height: 40px;
+}
+
+.forcesingleline {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	color: var(--theme-colour);
+}
+
+.postdate {
+	background-color: #262626;
+	white-space: nowrap; /* stop long titles from breaking the date */
+	border-top-left-radius: 6px; /* ??? */
+	border-bottom-left-radius: 6px;
 }
 
 footer {
@@ -201,37 +217,8 @@ footer {
 	color: grey;
 }
 
-/* light theme */
-@media (prefers-color-scheme: light) {
-	body {
-		background-color: #f1f1f1;
-		color: #000;
-	}
-
-	.content {
-		background-color: #f1f1f1;
-		box-shadow: 0px 0px 20px 1px #a1a1a1;
-	}
-
-	.home {
-		background-color: #fff;
-		box-shadow: 0px 0px 20px 1px #a1a1a1;
-	}
-
-	.darkersection {
-		background-color: #fff;
-	}
-
-	.project {
-		background-color: #161616;
-		color: #fff;
-	}
-	.project p, .project h2 a {
-		color: #fff;
-	}
-	#lang {
-		color: inherit;
-	}
+footer h3 {
+	margin: 0;
 }
 
 /* mobile */
@@ -265,8 +252,52 @@ footer {
 	.line {
 		margin: 28px 12px 28px 12px;
 	}
-	.animecontainer {
-		flex-direction: column;
+}
+
+/* light theme */
+@media (prefers-color-scheme: light) {
+	body {
+		background-color: #fff;
+		color: #000;
+	}
+
+	.content {
+		background-color: #fff;
+		box-shadow: 0px 0px 20px 1px #a1a1a1;
+	}
+
+	.home {
+		background-color: #fff;
+		box-shadow: 0px 0px 20px 1px #a1a1a1;
+	}
+
+	.darkersection {
+		background-color: #f5f5f5;
+	}
+
+	.line {
+		border-top: 2px solid #818181;
+	}
+
+	.project:hover {
+		box-shadow: 0 0 20px #888;
+	}
+
+	.project p, .project h2 a {
+		color: #000;
+	}
+
+	#lang {
+		color: inherit;
+	}
+
+	.blogpostpreview {
+		background-color: #fff;
+		border: 2px solid #e1e1e1;
+	}
+
+	.postdate {
+		background-color: #f3f3f3;
 	}
 }
 
@@ -278,7 +309,7 @@ footer {
 		left: 0;
 		right: 0;
 		z-index: -1;
-		background-image: url("/wow915live/ardenweald.jpeg");
+		background-image: url("Hu Tao.png");
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center;

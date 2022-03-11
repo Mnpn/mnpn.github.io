@@ -5,7 +5,7 @@ layout: default
 	<div class="aboutme">
 		<div class="title">
 			<div class="line left-side"></div>
-			<h1>Hi, I'm Mnpn!</h1>
+			<h1>Hi, I'm Martin!</h1>
 			<div class="line right-side"></div>
 		</div>
 		<h4>I am bla bla and I do bla bla, sometimes I bla bla about bla bla but that's about it.</h4>
@@ -47,26 +47,21 @@ layout: default
 		</div>
 	</section>
 
-	<section class="darkersection">
+	<section class="darkersection growsmost">
 		<div class="title">
 			<div class="line left-side"></div>
-			<h1>Anime Recommendations</h1>
+			<h1>Blog Posts</h1>
 			<div class="line right-side"></div>
 		</div>
-		<div class="animecontainer">
-			{% for anime in site.data.anime %}
-				<div class="animebox">
-					<img src="{{ anime.cover }}">
-					<div class="animeinfo">
-						<h1 class="{{ anime.colour }}"><a href="{{ anime.link }}">{{ anime.title }}</a></h1>
-						<p>{{ anime.description }}</p>
-					</div>
-				</div>
-			{% endfor %}
-		</div>
+		{% for post in site.posts limit:10 %}
+			<div class="blogpostpreview">
+				<p class="postdate">{{ post.date | date: "%Y-%m-%d" }}</p>
+				<p class="forcesingleline"><a href="{{ post.url }}">{{ post.title }}</a></p>
+			</div>
+		{% endfor %}
 	</section>
 
 	<footer>
-		<h3>Mnpn {{ 'now' | date: "%Y" }}</h3><p>Made with >:( in Sweden</p>
+		<h3>Blinieth {{ 'now' | date: "%Y" }}</h3><p>Made with >:( in Sweden</p>
 	</footer>
 </div>
