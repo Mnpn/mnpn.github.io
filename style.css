@@ -55,6 +55,25 @@ a:hover {
 	text-decoration: underline;
 }
 
+nav a {
+    background-color: #202020;
+	padding: 12px;
+    max-width: 250px;
+    margin: 0 auto;
+    border-radius: 8px;
+    transition: border-color .05s ease-out;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-size: 13pt;
+}
+
+nav a:hover {
+    text-decoration: none;
+    border-color: var(--theme-colour);
+}
+
 /* section stuff */
 section, footer {
 	padding: 0 20px 0 20px;
@@ -140,10 +159,11 @@ section, footer {
 	display: flex;
 	flex-direction: column;
 	margin: 16px;
+	background-color: #121212;
 }
 
 .project:hover {
-	box-shadow: 0 0 50px #000;
+	box-shadow: 0 0 25px #000;
 }
 
 .project h2 {
@@ -159,7 +179,7 @@ section, footer {
 
 .project h2 a {
 	text-decoration: none;
-	transition: color .15s;
+	transition: color .1s;
 }
 
 .project h2 a:hover { /* language colour on hover */
@@ -279,6 +299,10 @@ footer h3 {
 		border-top: 2px solid #818181;
 	}
 
+	.project {
+		background-color: #f3f3f3;
+	}
+
 	.project:hover {
 		box-shadow: 0 0 20px #888;
 	}
@@ -289,6 +313,12 @@ footer h3 {
 
 	#lang {
 		color: inherit;
+	}
+
+	nav a {
+		color: #000;
+		background-color: #f3f3f3;
+		border: 2px solid #e1e1e1;
 	}
 
 	.blogpostpreview {

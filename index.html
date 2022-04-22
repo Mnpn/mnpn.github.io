@@ -5,14 +5,16 @@ layout: default
 	<div class="aboutme">
 		<div class="title">
 			<div class="line left-side"></div>
-			<h1>Hi, I'm Martin!</h1>
+			<h1>About me</h1>
 			<div class="line right-side"></div>
 		</div>
 		<h4>I am bla bla and I do bla bla, sometimes I bla bla about bla bla but that's about it.</h4>
 		<h4>This page is super duper unfinished and should probably not even be live</h4>
-		{% for link in site.data.main_links %}
-		<h2><a href="{{ link.url }}" {% if link.external %}target="_blank"{% endif %}>{{ link.title }} {% if link.external %}&UpperRightArrow;{% endif %}</a></h2>
-		{% endfor %}
+		<nav>
+			{% for link in site.data.main_links %}
+				<p><a href="{{ link.url }}" {% if link.external %}target="_blank"{% endif %}>{{ link.title }}{% if link.external %} &UpperRightArrow;{% endif %}</a></p>
+			{% endfor %}
+		</nav>
 	</div>
 	<div class="bottomnote">
 		<img src="/assets/gspfp.jpeg">

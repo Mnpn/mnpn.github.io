@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<link rel="stylesheet" href="./monogatari/monogatari_style.css" />
+<div class="content">
+	<section>
+		<div class="title">
+			<h1 class="rem-mob"><a href="/">Home</a></h1>
+			<div class="line right-side"></div>
+			<h1>Monogatari OST</h1>
+			<div class="line left-side"></div>
+		</div>
+		<div class="tracks">
+			{% for video in site.data.monogatari_tracks %}
+				<div class="track">
+					<h2>{{ video.title }}</h2>
+					<iframe width="560" height="158" src="https://www.youtube-nocookie.com/embed/{{ video.id }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			{% endfor %}
+		</div>
+	</section>
+</div>
