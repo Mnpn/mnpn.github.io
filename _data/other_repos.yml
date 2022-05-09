@@ -1,7 +1,7 @@
 - url: https://github.com/ish-app/ish.app
   name: ish.app
   language: HTML
-  description: "The website for iSH, the Linux shell for iOS! Visit it <a href=\"https://ish.app\">here</a>."
+  description: "The website for iSH, the Linux shell for iOS! Have a look at its <a href=\"https://ish.app\">homepage</a>."
 
 - url: https://github.com/discordconsole-team/DiscordConsole
   name: DiscordConsole

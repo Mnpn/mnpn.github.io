@@ -8,8 +8,8 @@ layout: default
 			<h1>About me</h1>
 			<div class="line right-side"></div>
 		</div>
-		<h4>I am bla bla and I do bla bla, sometimes I bla bla about bla bla but that's about it.</h4>
-		<h4>This page is super duper unfinished and should probably not even be live</h4>
+		<p>I am bla bla and I do bla bla, sometimes I bla bla about bla bla but that's about it.</p>
+		<p>This page is super duper unfinished and should probably not even be live</p>
 		<nav>
 			{% for link in site.data.main_links %}
 				<p><a href="{{ link.url }}" {% if link.external %}target="_blank"{% endif %}>{{ link.title }}{% if link.external %} &UpperRightArrow;{% endif %}</a></p>
@@ -17,8 +17,8 @@ layout: default
 		</nav>
 	</div>
 	<div class="bottomnote">
-		<img src="/assets/gspfp.jpeg">
-		<h4>&#8212; &#183; &#8212;</h4>
+		<img src="/assets/gspfp.jpeg" alt="Space profile picture">
+		<p>&#8212; &#183; &#8212;</p>
 	</div>
 </section>
 
@@ -34,7 +34,7 @@ layout: default
 				<div class="project {{ repo.language }}">
 					<h2><a href="{{ repo.url }}">{{ repo.name }}</a></h2>
 					<p>{{ repo.description }}</p>
-					<h4>{{ repo.language }}</h4>
+					<span>{{ repo.language }}</span>
 				</div>
 			{% endfor %}
 			{% for repo in site.github.public_repositories %}
@@ -42,7 +42,7 @@ layout: default
 					<div class="project {{ repo.language }}">
 						<h2><a href="{{ repo.html_url }}">{{ repo.name }}</a></h2>
 						<p>{{ repo.description }}</p>
-						<h4 id="lang">{{ repo.language }}</h4>
+						<span id="lang">{{ repo.language }}</span>
 					</div>
 				{% endif %}
 			{% endfor %}
@@ -64,6 +64,6 @@ layout: default
 	</section>
 
 	<footer>
-		<h3>Blinieth {{ 'now' | date: "%Y" }}</h3><p>Made with >:( in Sweden</p>
+		<p>Blinieth {{ 'now' | date: "%Y" }}</p><p>Made with >:( in Sweden</p>
 	</footer>
 </div>

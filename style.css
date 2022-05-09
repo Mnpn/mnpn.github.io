@@ -1,5 +1,5 @@
 :root {
-	--theme-colour: #ba3a34; /* 34a8eb */
+	--theme-colour: #ff4f3a; /* 34a8eb */
 	--background: #0f0f0f;
 }
 
@@ -119,6 +119,10 @@ section, footer {
 	/*margin-top: 28px;*/
 }
 
+.aboutme p {
+	margin-top: 0;
+}
+
 .home img {
 	display: block;
 	width: 128px;
@@ -192,6 +196,10 @@ section, footer {
 	color: #fff;
 }
 
+.project span {
+	margin-bottom: 12px;
+}
+
 .blogpostpreview {
 	display: flex;
 	background-color: #161616;
@@ -254,7 +262,10 @@ footer h3 {
 		flex-direction: row;
 		align-items: flex-end;
 		box-shadow: none;
-		margin: 0;
+		margin: 0 auto;
+	}
+	.bottomnote {
+		display: none;
 	}
 	.content {
 		overflow: hidden;
@@ -339,7 +350,7 @@ footer h3 {
 		left: 0;
 		right: 0;
 		z-index: -1;
-		background-image: url("Hu Tao.png");
+		background-image: url("assets/tao_bg.jpg");
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center;
