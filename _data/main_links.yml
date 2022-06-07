@@ -10,10 +10,10 @@
   title: "E-mail"
   external: false
 
-- url: "https://twitter.com/Blinieth"
-  title: "Internal Test"
+- url: "#discord"
+  title: "" # css manages
   external: false
 
-- url: "https://twitter.com/Blinieth"
-  title: "External Test"
-  external: true
+- url: "https://myanimelist.net/animelist/Mnpn"
+  title: "Anime List"
+  external: false

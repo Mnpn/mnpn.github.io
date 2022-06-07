@@ -123,6 +123,9 @@ section, footer {
 	margin-top: 0;
 }
 
+.aboutme a[href$="#discord"]:before { content: "Discord"; }
+.aboutme a[href$="#discord"]:hover:before { content: "Mnpn#5043"; }
+
 .home img {
 	display: block;
 	width: 128px;
@@ -288,18 +291,18 @@ footer h3 {
 /* light theme */
 @media (prefers-color-scheme: light) {
 	body {
-		background-color: #fff;
+		/*background-color: #fff;*/
 		color: #000;
 	}
 
 	.content {
 		background-color: #fff;
-		box-shadow: 0px 0px 20px 1px #a1a1a1;
+		/*box-shadow: 0px 0px 20px 1px #a1a1a1;*/
 	}
 
 	.home {
 		background-color: #fff;
-		box-shadow: 0px 0px 20px 1px #a1a1a1;
+		/*box-shadow: 0px 0px 20px 1px #a1a1a1;*/
 	}
 
 	.darkersection {
