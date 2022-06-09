@@ -104,7 +104,7 @@ section, footer {
 /* hero thing */
 .home {
 	min-width: 250px;
-	max-width: 400px;
+	max-width: 300px;
 	background-color: #161616;
 	border-top: 2px solid var(--theme-colour);
 	display: flex;
