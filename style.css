@@ -252,6 +252,13 @@ footer h3 {
 	margin: 0;
 }
 
+footer p {
+	line-height: 24px;
+}
+
+#kao:before { content: attr(before); }
+#kao:hover:before { content: "☆⌒(> _ <)"; }
+
 /* mobile */
 @media only screen and (max-width: 700px) {
 	body {
