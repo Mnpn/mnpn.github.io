@@ -3,7 +3,7 @@ html { /* visible when scroll bobs */
 }
 
 body {
-	background: linear-gradient(0deg, #000, #0f0f0f);
+	background: linear-gradient(0deg, #342d5425, #000);
 	color: #fff;
 	font-family: Ubuntu, 'Noto Sans', sans-serif;
 	margin: 0;
