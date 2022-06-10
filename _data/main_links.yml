@@ -10,7 +10,7 @@
   title: "E-mail"
   external: false
 
-- url: "discord://discordapp.com/users/172030506970382337"
+- url: "discord://discordapp.com/users/172030506970382337\" aria-label=\"Discord"
   title: "" # css manages
   external: false
 
