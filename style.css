@@ -1,5 +1,5 @@
 :root {
-	--theme-colour: #ff4f3a; /* 34a8eb */
+	--accent-colour: #ff4f3a; /* 34a8eb */
 	--background: #0f0f0f;
 }
 
@@ -20,7 +20,7 @@ body {
 	flex-direction: column;
 	overflow-y: auto;
 	min-height: 0px;
-	border-top: 2px solid var(--theme-colour);
+	border-top: 2px solid var(--accent-colour);
 	margin: 26px 26px 0px 26px;
 	box-shadow: 0px 0px 20px 1px #000000;
 	background-color: #161616;
@@ -52,7 +52,7 @@ header {
 
 a {
 	text-decoration: none;
-	color: var(--theme-colour);
+	color: var(--accent-colour);
 }
 
 a:hover {
@@ -75,7 +75,7 @@ nav a {
 
 nav a:hover {
     text-decoration: none;
-    border-color: var(--theme-colour);
+    border-color: var(--accent-colour);
 }
 
 /* section stuff */
@@ -110,7 +110,7 @@ section, footer {
 	min-width: 250px;
 	max-width: 300px;
 	background-color: #161616;
-	border-top: 2px solid var(--theme-colour);
+	border-top: 2px solid var(--accent-colour);
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -135,7 +135,7 @@ section, footer {
 	width: 128px;
 	height: auto;
 	margin: 20px auto;
-	border: 2px solid var(--theme-colour);
+	border: 2px solid var(--accent-colour);
 }
 
 .bottomnote {
@@ -219,7 +219,7 @@ section, footer {
 }
 
 .blogpostpreview:hover {
-	border: 2px solid var(--theme-colour);
+	border: 2px solid var(--accent-colour);
 }
 
 .blogpostpreview p {
@@ -235,7 +235,7 @@ section, footer {
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
-	color: var(--theme-colour);
+	color: var(--accent-colour);
 }
 
 .postdate {
