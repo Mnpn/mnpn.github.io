@@ -10,7 +10,7 @@
   title: "E-mail"
   external: false
 
-- url: "#discord"
+- url: "discord://discordapp.com/users/172030506970382337"
   title: "" # css manages
   external: false
 

@@ -123,8 +123,8 @@ section, footer {
 	margin-top: 0;
 }
 
-.aboutme a[href$="#discord"]:before { content: "Discord"; }
-.aboutme a[href$="#discord"]:hover:before { content: "Mnpn#5043"; }
+.aboutme a[href$="172030506970382337"]:before { content: "Discord"; }
+.aboutme a[href$="172030506970382337"]:hover:before { content: "Mnpn#5043"; }
 
 .home img {
 	display: block;
