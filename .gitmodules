@@ -1,0 +1,3 @@
+[submodule "assets/external"]
+	path = assets/external
+	url = https://github.com/Mnpn/other-assets.git
