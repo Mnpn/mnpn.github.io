@@ -1,6 +1,7 @@
 :root {
-	--accent-colour: #ff4f3a; /* 34a8eb */
+	--accent-colour: #9a74fa; /* #ff4f3a */
 	--background: #0f0f0f;
+	--alpha-accent-background: #161616e0;
 }
 
 body {
@@ -23,7 +24,7 @@ body {
 	border-top: 2px solid var(--accent-colour);
 	margin: 26px 26px 0px 26px;
 	box-shadow: 0px 0px 20px 1px #000000;
-	background-color: #161616;
+	background-color: var(--alpha-accent-background);
 	border-top-left-radius: 15px;
 	border-top-right-radius: 15px;
 	flex-grow: 1; /* in case there's not enough repos */
@@ -84,7 +85,7 @@ section, footer {
 }
 
 .darkersection {
-	background-color: var(--background);
+	background-color: #0f0f0fa0;
 	padding-bottom: 2px; /* otherwise the footer eats into it? :HUHTao: */
 }
 
@@ -109,7 +110,7 @@ section, footer {
 .home {
 	min-width: 250px;
 	max-width: 300px;
-	background-color: #161616;
+	background-color: var(--alpha-accent-background);
 	border-top: 2px solid var(--accent-colour);
 	display: flex;
 	flex-direction: column;
@@ -282,6 +283,7 @@ footer p {
 		display: none;
 	}
 	.content {
+		background-color: #161616;
 		overflow: hidden;
 		margin: 0;
 	}
@@ -364,10 +366,10 @@ footer p {
 		left: 0;
 		right: 0;
 		z-index: -1;
-		background-image: url("assets/tao_bg.jpg");
+		background-image: url("assets/bg.jpg");
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center;
-		filter: blur(6px);
+		filter: blur(8px);
 	}
 }

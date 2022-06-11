@@ -1,5 +1,5 @@
 :root {
-	--accent-colour: #ff4f3a;
+	--accent-colour: #9a74fa;
 }
 
 html { /* visible when scroll bobs */
@@ -7,7 +7,7 @@ html { /* visible when scroll bobs */
 }
 
 body {
-	background: linear-gradient(0deg, #342d5425, #000);
+	background: linear-gradient(0deg, #342d5440, #000);
 	color: #fff;
 	font-family: Ubuntu, 'Noto Sans', sans-serif;
 	margin: 0;
