@@ -38,9 +38,11 @@ I eventually bit the bullet and just made a new user account, and set everything
 ### The cause
 After having desperately achieved seemingly nothing over **far too many** hours of troubleshooting and feeling out of reasonable options, I decided to bring up Activity Monitor and just randomly start killing processes. I was convinced something was running on my user account that wasn’t on a fresh one. After doing this for a while, I killed two AirPlay processes, one of which–the culprit–was ”AirPlay (DFRExtra)”.
 
-<video title="AirPlay (DFRExtra) in action" width="100%" preload="metadata" controls>
-	<source src="/assets/external/airplay-disaster.mp4" type="video/mp4">
-</video><br />
+<div>
+	<video title="AirPlay (DFRExtra) in action" width="800" height="500" preload="metadata" controls>
+		<source src="/assets/external/airplay-disaster.mp4" type="video/mp4">
+	</video>
+</div>
 
 The network problems vanished in a matter of seconds, and Saagar informed me that DFR stands for “Device Function Row”, the Touch Bar. It hit me, I had placed an AirPlay button on my Touch Bar, and every time I signed in–safe mode or not–macOS launched this process and presumably started to actively and constantly look for displays on my network.
 

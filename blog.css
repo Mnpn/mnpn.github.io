@@ -109,6 +109,14 @@ ul h2 {
 	max-width: 50%;
 }
 
+div > video {
+	max-width: 100%;
+	max-height: 500px;
+	height: auto;
+	display: block;
+	margin-bottom: 12px;
+}
+
 aside {
 	background-color: #1f1f1f;
 	border: 2px solid #262626;
