@@ -1,6 +1,7 @@
 :root {
 	--accent-colour: #9a74fa; /* #ff4f3a */
 	--background: #0f0f0f;
+	--accent-background: #161616;
 	--alpha-accent-background: #161616e0;
 }
 
@@ -118,10 +119,6 @@ section, footer {
 	border-top-right-radius: 15px;
 	margin: 26px 6.5px 0 0;
 	box-shadow: 0px 0px 20px 1px #000000;
-}
-
-.aboutme {
-	/*margin-top: 28px;*/
 }
 
 .aboutme p {
@@ -283,12 +280,9 @@ footer p {
 		display: none;
 	}
 	.content {
-		background-color: #161616;
+		background-color: var(--accent-background);
 		overflow: hidden;
 		margin: 0;
-	}
-	.aboutme {
-		margin-top: 0;
 	}
 	.left-side {
 		display: block;
@@ -303,23 +297,17 @@ footer p {
 
 /* light theme */
 @media (prefers-color-scheme: light) {
-	body {
-		/*background-color: #fff;*/
+	:root {
+		--accent-colour: #6339cb;
+		--alpha-accent-background: #ffffffe0;
+	}
+
+	body, nav a {
 		color: #000;
 	}
 
-	.content {
-		background-color: #fff;
-		/*box-shadow: 0px 0px 20px 1px #a1a1a1;*/
-	}
-
-	.home {
-		background-color: #fff;
-		/*box-shadow: 0px 0px 20px 1px #a1a1a1;*/
-	}
-
 	.darkersection {
-		background-color: #f5f5f5;
+		background-color: #f5f5f5a0;
 	}
 
 	.line {
@@ -327,7 +315,7 @@ footer p {
 	}
 
 	.project {
-		background-color: #f3f3f3;
+		background-color: #fff;
 	}
 
 	.project:hover {
@@ -338,19 +326,9 @@ footer p {
 		color: #000;
 	}
 
-	#lang {
-		color: inherit;
-	}
-
-	nav a {
-		color: #000;
-		background-color: #f3f3f3;
-		border: 2px solid #e1e1e1;
-	}
-
-	.blogpostpreview {
+	.blogpostpreview, nav a {
 		background-color: #fff;
-		border: 2px solid #e1e1e1;
+		border: 2px solid rgba(0, 0, 0, 0.16);
 	}
 
 	.postdate {
@@ -371,5 +349,12 @@ footer p {
 		background-size: cover;
 		background-position: center;
 		filter: blur(8px);
+	}
+}
+
+@media screen and (prefers-color-scheme: light) {
+	@media screen and (max-width: 700px), (max-height: 599px) {
+		:root { --background: #f1f1f1; --accent-background: #fff } /* only light background on light theme mobile page.. D: */
+		.content { box-shadow: 0 0 20px 1px #999 }
 	}
 }

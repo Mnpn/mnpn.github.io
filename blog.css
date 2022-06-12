@@ -126,13 +126,17 @@ aside span { font-weight: bold }
 .aside-disclaimer { border-left: 4px solid #eb152e }
 .aside-fun-fact   { border-left: 4px solid #34a8eb }
 
-.aside-update span	 { color: #32a852 }
-.aside-warning span	{ color: orange }
+.aside-update span { color: #32a852 }
+.aside-warning span { color: orange }
 .aside-disclaimer span { color: #eb152e }
-.aside-fun-fact span   { color: #34a8eb }
+.aside-fun-fact span { color: #34a8eb }
 
 @media (prefers-color-scheme: light) {
-	body {
+	:root {
+		--accent-colour: #6339cb;
+	}
+
+	body, html {
 		background: #f1f1f1;
 		color: #000;
 	}
