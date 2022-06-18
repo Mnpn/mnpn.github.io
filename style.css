@@ -151,6 +151,7 @@ section, footer {
 .Ruby:hover 		{ color: #701516; border-bottom: 2px solid #701516 }
 .Rust:hover 		{ color: #dea584; border-bottom: 2px solid #dea584 }
 .Shell:hover 		{ color: #89e051; border-bottom: 2px solid #89e051 }
+.Swift:hover 		{ color: #f05138; border-bottom: 2px solid #f05138 }
 
 .projects {
 	display: flex;
