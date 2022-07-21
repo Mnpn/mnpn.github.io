@@ -13,16 +13,18 @@ What caused this? An AirPlay button on my Touch Bar.
 ### Troubleshooting hell
 A while after thinking this was an issue with Parsec itself (despite no one mentioning it anywhere) I noticed that this also applied to other local streaming services, such as Valve’s Steam Play, and I instead excused it as some sort of new driver incompatibility. However, around New Years 2022 I ran some various network speed tests for unrelated reasons and noticed that I was consistently getting a speed of \~340/30, instead of the \~650/50 I was expecting. I ran the same test to the same server on my phone, and lo and behold, I saw the speeds I expected.
 
-<div class="sbs-img">
-	<div>
-		<img src="/assets/airplay/speed-during.png" style="max-width: 100%" alt="Terminal displaying a network speed of 350 Mbps from a networkQuality test">
-		<p><em>Something's not quite right</em></p>
+<html> <!-- apparently you now need to do html tags to have it not highlight the code -->
+	<div class="sbs-img">
+		<div>
+			<img src="/assets/airplay/speed-during.png" style="max-width: 100%" alt="Terminal displaying a network speed of 350 Mbps from a networkQuality test">
+			<p><em>Something's not quite right</em></p>
+		</div>
+		<div>
+			<img src="/assets/airplay/speed-without.png" style="max-width: 100%" alt="Terminal displaying a network speed of 600 Mbps from a networkQuality test">
+			<p><em>It's supposed to look like this</em></p>
+		</div>
 	</div>
-	<div>
-		<img src="/assets/airplay/speed-without.png" style="max-width: 100%" alt="Terminal displaying a network speed of 600 Mbps from a networkQuality test">
-		<p><em>It's supposed to look like this</em></p>
-	</div>
-</div>
+</html>
 
 I was fairly certain this was a software problem since I initially blamed the upgrade to macOS Monterey, so my first step was to start my Mac in safe mode. This changed nothing.
 
@@ -39,11 +41,13 @@ I eventually bit the bullet and just made a new user account, and set everything
 ### The cause
 After having desperately achieved seemingly nothing over **far too many** hours of troubleshooting and feeling out of reasonable options, I decided to bring up Activity Monitor and just randomly start killing processes. I was convinced something was running on my user account that wasn’t on a fresh one. After doing this for a while, I killed two AirPlay processes, one of which–the culprit–was ”AirPlay (DFRExtra)”.
 
-<div>
-	<video title="AirPlay (DFRExtra) in action" width="800" height="500" preload="metadata" controls>
-		<source src="/assets/external/airplay-disaster.mp4" type="video/mp4">
-	</video>
-</div>
+<html>
+	<div>
+		<video title="AirPlay (DFRExtra) in action" width="800" height="500" preload="metadata" controls>
+			<source src="/assets/external/airplay-disaster.mp4" type="video/mp4">
+		</video>
+	</div>
+</html>
 
 The network problems vanished in a matter of seconds, and Saagar informed me that DFR stands for “Device Function Row”, the Touch Bar. It hit me, I had placed an AirPlay button on my Touch Bar, and every time I signed in–safe mode or not–macOS launched this process and presumably started to actively and constantly look for displays on my network.
 
