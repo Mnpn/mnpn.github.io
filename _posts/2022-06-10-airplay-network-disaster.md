@@ -2,8 +2,9 @@
 layout: post
 title: AirPlay + Touch Bar = Network Disaster
 created: 2022-06-10
-updated:
+updated: 2022-07-21
 ---
+{% include aside.html type="Update" content="I got a reply to my feedback last night! Some great people at Apple have resolved this in macOS 12.5 (out now!) and Ventura (beta 3). It appears that the DFRExtra process now only seeks while active (and stops doing so when dismissed), so it is no longer destroying network performance in the background.<br><br>Thanks to everyone who helped spread the word or worked on the fix – you're awesome! ヽ(* ^ ω ^)ﾉ" %}
 
 Ever since about the time I upgraded my 2019 MacBook Pro to macOS Monterey in August of 2021 I had been unable to use [Parsec](https://parsec.app) properly. I constantly encountered dips in performance every other second, with lots of rubber banding and pretty much constant audio lag (akin to what happens if you open the Wi-Fi dropdown on your menu bar and it starts scanning for networks). I figured this was simply because I had hopped on the upgrade train early and the program simply didn’t support the new version of macOS yet, so I didn’t care too much other than taking the time to look through some support channels (to no avail).
 
@@ -61,3 +62,4 @@ Thank you for coming to my TED talk,<br>
 Martin
 
 {% include aside.html type="Applicable to" content="(at least) macOS Monterey 12.0-12.4, Ventura untested" %}
+{% include aside.html type="Update" content="Resolved in macOS Monterey 12.5 and Ventura beta 3 (build 22A5295i)" %}
