@@ -24,12 +24,11 @@
 	<body>
 		<header>
 			<nav>
-				<div class="title">
-					<div class="line left-side"></div>
-					<h1 ><a href="/">Home</a></h1>
-					<div class="line right-side"></div>
-					<h1 class="rem-mob">Blog</h1>
-				</div>
+				<a href="/">Home</a>
+				{% if page.updated %}
+				<a href="https://github.com/{{ site.repository }}/commits/v3-master/{{ page.path }}">History</a>
+				{% endif %}
+				<div class="line right-side"></div>
 			</nav>
 		</header>
 		<div class="content">

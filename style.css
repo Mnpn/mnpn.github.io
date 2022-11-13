@@ -62,22 +62,22 @@ a:hover {
 }
 
 nav a {
-    background-color: #202020;
+	background-color: #202020;
 	padding: 12px;
-    max-width: 250px;
-    margin: 0 auto;
-    border-radius: 8px;
-    transition: border-color .05s ease-out;
-    border: 2px solid rgba(255, 255, 255, 0.1);
-    color: white;
-    display: flex;
-    justify-content: center;
-    font-size: 13pt;
+	max-width: 250px;
+	margin: 0 auto;
+	border-radius: 8px;
+	transition: border-color .05s ease-out;
+	border: 2px solid rgba(255, 255, 255, 0.1);
+	color: white;
+	display: flex;
+	justify-content: center;
+	font-size: 13pt;
 }
 
 nav a:hover {
-    text-decoration: none;
-    border-color: var(--accent-colour);
+	text-decoration: none;
+	border-color: var(--accent-colour);
 }
 
 /* section stuff */
