@@ -111,6 +111,7 @@ section, footer {
 .home {
 	min-width: 250px;
 	max-width: 300px;
+	width: 100%; /* take up all the space allowed */
 	background-color: var(--alpha-accent-background);
 	border-top: 2px solid var(--accent-colour);
 	display: flex;
