@@ -2,12 +2,16 @@
   title: "GitHub"
   external: false
 
-- url: "https://twitter.com/Blinieth"
-  title: "Twitter"
-  external: false
-
 - url: "mailto:martin@mnpn.dev"
   title: "E-mail"
+  external: false
+
+- url: "https://mstdn.jp/@mnpn\" rel=\"me"
+  title: "Mastodon"
+  external: false
+
+- url: "https://twitter.com/Blinieth"
+  title: "Twitter"
   external: false
 
 - url: "discord://discordapp.com/users/172030506970382337\" aria-label=\"Discord"
