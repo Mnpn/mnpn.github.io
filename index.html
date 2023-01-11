@@ -31,21 +31,24 @@ kaomoji: ["(^ヮ^)", "(*≧ω≦*)", "(* ^ ω ^)", "(^ᴗ^)", "(⌒▽⌒)☆", 
 			<div class="line right-side"></div>
 		</div>
 		<div class="projects">
+			{% assign gh_repos = site.github.public_repositories %}
+			{% for local_repo in site.data.repositories %}
+				{% for repo in gh_repos %}
+					{% if repo.name contains local_repo %}
+						<div class="project {{ repo.language }}">
+							<h2><a href="{{ repo.html_url }}">{{ repo.name }}</a></h2>
+							<p>{{ repo.description }}</p>
+							<span>{{ repo.language }}</span>
+						</div>
+					{% endif %}
+				{% endfor %}
+			{% endfor %}
 			{% for repo in site.data.other_repos %}
 				<div class="project {{ repo.language }}">
 					<h2><a href="{{ repo.url }}">{{ repo.name }}</a></h2>
 					<p>{{ repo.description }}</p>
 					<span>{{ repo.language }}</span>
 				</div>
-			{% endfor %}
-			{% for repo in site.github.public_repositories %}
-				{% if site.data.repositories contains repo.name %}
-					<div class="project {{ repo.language }}">
-						<h2><a href="{{ repo.html_url }}">{{ repo.name }}</a></h2>
-						<p>{{ repo.description }}</p>
-						<span>{{ repo.language }}</span>
-					</div>
-				{% endif %}
 			{% endfor %}
 		</div>
 	</section>
