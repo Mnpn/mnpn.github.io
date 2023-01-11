@@ -1,8 +1,10 @@
 :root {
-	--accent-colour: #9a74fa; /* #ff4f3a */
+	--accent-colour: #bb3436; /*#9a74fa; /* #ff4f3a */
 	--background: #0f0f0f;
 	--accent-background: #161616;
-	--alpha-accent-background: #161616e0;
+	--alpha-accent-background: #161616f0;
+	--border: #242424;
+	--kantighet: 6px;
 }
 
 body {
@@ -15,6 +17,7 @@ body {
 	display: flex;
 	flex-direction: row;
 	height: 100vh;
+	font-size: 12pt;
 }
 
 .content {
@@ -22,17 +25,17 @@ body {
 	flex-direction: column;
 	overflow-y: auto;
 	min-height: 0px;
-	border-top: 2px solid var(--accent-colour);
-	margin: 26px 26px 0px 26px;
+	margin: 20px;
+	margin-left: 10px;
+	border-radius: var(--kantighet);
 	box-shadow: 0px 0px 20px 1px #000000;
 	background-color: var(--alpha-accent-background);
-	border-top-left-radius: 15px;
-	border-top-right-radius: 15px;
+	border: 2px solid var(--border);
 	flex-grow: 1; /* in case there's not enough repos */
 }
 
 h1 {
-	font-size: 20pt;
+	font-size: 1.5em;
 	color: inherit;
 	padding: 12px 0 12px 0;
 	margin: 0;
@@ -41,6 +44,8 @@ h1 {
 h1, h2 {
 	font-weight: normal;
 }
+
+h2 { font-size: 1.3rem }
 
 hr {
 	border: 0;
@@ -63,16 +68,16 @@ a:hover {
 
 nav a {
 	background-color: #202020;
-	padding: 12px;
-	max-width: 250px;
+	padding: 10px;
+	max-width: 80%;
 	margin: 0 auto;
-	border-radius: 8px;
+	border-radius: var(--kantighet);
 	transition: border-color .05s ease-out;
 	border: 2px solid rgba(255, 255, 255, 0.1);
 	color: white;
 	display: flex;
 	justify-content: center;
-	font-size: 13pt;
+	font-size: 1.05em;
 }
 
 nav a:hover {
@@ -86,7 +91,7 @@ section, footer {
 }
 
 .darkersection {
-	background-color: #0f0f0fa0;
+	background-color: #0f0f0fc0;
 	padding-bottom: 2px; /* otherwise the footer eats into it? :HUHTao: */
 }
 
@@ -95,11 +100,11 @@ section, footer {
 }
 
 .title { display: flex; }
-.title h1 { margin: 0 16px 0 16px; }
 
 .line {
-	border-top: 2px solid #383838;
-	margin: 28px;
+	border-top: 2px solid var(--accent-colour);
+	margin-top: 25px;
+	margin-left: 20px;
 	flex-grow: 1;
 }
 
@@ -113,12 +118,13 @@ section, footer {
 	max-width: 300px;
 	width: 100%; /* take up all the space allowed */
 	background-color: var(--alpha-accent-background);
-	border-top: 2px solid var(--accent-colour);
+	border: 2px solid var(--border);
+	border-radius: var(--kantighet);
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	border-top-right-radius: 15px;
-	margin: 26px 6.5px 0 0;
+	margin: 20px;
+	margin-right: 10px;
 	box-shadow: 0px 0px 20px 1px #000000;
 }
 
@@ -133,8 +139,9 @@ section, footer {
 	display: block;
 	width: 128px;
 	height: auto;
-	margin: 20px auto;
+	margin: 0 auto;
 	border: 2px solid var(--accent-colour);
+	border-radius: var(--kantighet);
 }
 
 .bottomnote {
@@ -163,29 +170,32 @@ section, footer {
 }
 
 .project {
-	border: 2px solid #000;
+	border: 2px solid var(--border);
 	height: 220px;
-	transition: .15s box-shadow ease-out, .15s color ease-out, .15s border-bottom ease-out;
+	transition: .15s box-shadow ease-out, .15s color ease-out, .15s border ease-out, .15s border-bottom ease-out;
 	width: 250px;
 	display: flex;
 	flex-direction: column;
-	margin: 16px;
-	background-color: #121212;
+	margin: 8px;
+	background-color: #0f0f0fc0;
+	border-radius: var(--kantighet);
 }
 
 .project:hover {
-	box-shadow: 0 0 25px #000;
+	border-left: 2px solid #303030;
+	border-top: 2px solid #303030;
+	border-right: 2px solid #303030;
+	box-shadow: 0px 0px 9px 3px rgba(0,0,0,0.51);
 }
 
 .project h2 {
-	border-bottom: 2px solid #000;
+	border-bottom: 2px solid var(--border);
 	margin: 0 24px 0 24px;
 	padding: 16px 0 12px 0;
 }
 
 .project h2 a {
 	color: #fff;
-
 }
 
 .project h2 a {
@@ -373,7 +383,7 @@ footer p {
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center;
-		filter: blur(8px);
+		filter: blur(8px) hue-rotate(120deg);
 	}
 }
 
