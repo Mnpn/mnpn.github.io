@@ -1,5 +1,5 @@
 :root {
-	--accent-colour: #bb3436; /*#9a74fa; /* #ff4f3a */
+	--accent-colour: #7e74fa; /* #bb3436, #7e74fa, #ff4f3a, #b070a4 */
 	--background: #0f0f0f;
 	--accent-background: #161616;
 	--alpha-accent-background: #161616f0;
@@ -31,21 +31,20 @@ body {
 	box-shadow: 0px 0px 20px 1px #000000;
 	background-color: var(--alpha-accent-background);
 	border: 2px solid var(--border);
-	flex-grow: 1; /* in case there's not enough repos */
+	flex-grow: 1; /* in case there are not enough repos */
 }
 
 h1 {
 	font-size: 1.5em;
-	color: inherit;
 	padding: 12px 0 12px 0;
-	margin: 0;
-}
-
-h1, h2 {
-	font-weight: normal;
 }
 
 h2 { font-size: 1.3rem }
+
+h1, h2 {
+	font-weight: normal;
+	margin: 0;
+}
 
 hr {
 	border: 0;
@@ -92,7 +91,7 @@ section, footer {
 
 .darkersection {
 	background-color: #0f0f0fc0;
-	padding-bottom: 2px; /* otherwise the footer eats into it? :HUHTao: */
+	padding-bottom: 8px; /* otherwise the footer eats into it? :HUHTao: */
 }
 
 .growsmost {
@@ -326,7 +325,7 @@ footer p {
 		margin: 0 10px 0 10px;
 	}
 	.line {
-		margin: 28px 12px 28px 12px;
+		margin: 25px 12px 25px 12px;
 	}
 }
 
@@ -335,26 +334,22 @@ footer p {
 	:root {
 		--accent-colour: #6339cb;
 		--alpha-accent-background: #ffffffe0;
+		--border: #dadada;
 	}
 
 	body, nav a {
 		color: #000;
 	}
 
-	.darkersection {
+	.darkersection, .project {
 		background-color: #f5f5f5a0;
 	}
 
-	.line {
-		border-top: 2px solid #818181;
-	}
-
-	.project {
-		background-color: #fff;
-	}
-
 	.project:hover {
-		box-shadow: 0 0 20px #888;
+		box-shadow: 0px 0px 9px 3px rgba(0, 0, 0, 0.2);
+		border-left: 2px solid #e0e0e0;
+		border-top: 2px solid #e0e0e0;
+		border-right: 2px solid #e0e0e0;
 	}
 
 	.project p, .project h2 a {
@@ -383,7 +378,12 @@ footer p {
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center;
-		filter: blur(8px) hue-rotate(120deg);
+		filter: blur(8px) hue-rotate(-10deg);
+	}
+}
+@media screen and (max-height: 737px) {
+	.bottomnote {
+		display: none;
 	}
 }
 
