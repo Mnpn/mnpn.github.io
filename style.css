@@ -275,6 +275,7 @@ footer {
 
 footer p {
 	margin: 0;
+	line-height: 20px; /* required for kaomoji:hover to not jump */
 }
 
 #kao:before { content: attr(before); }
