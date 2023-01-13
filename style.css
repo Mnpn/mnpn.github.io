@@ -147,6 +147,7 @@ section, aside {
 	text-align: center;
 	color: grey;
 	user-select: none;
+	-webkit-user-select: none;
 }
 
 /* project section */
