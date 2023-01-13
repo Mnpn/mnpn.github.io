@@ -85,7 +85,7 @@ nav a:hover {
 }
 
 /* section stuff */
-section, footer {
+section, aside {
 	padding: 0 20px 0 20px;
 }
 
@@ -137,7 +137,7 @@ section, footer {
 .home img {
 	display: block;
 	width: 128px;
-	height: auto;
+	height: 128px;
 	margin: 0 auto;
 	border: 2px solid var(--accent-colour);
 	border-radius: var(--kantighet);
@@ -170,9 +170,8 @@ section, footer {
 
 .project {
 	border: 2px solid var(--border);
-	height: 220px;
 	transition: .15s box-shadow ease-out, .15s color ease-out, .15s border ease-out, .15s border-bottom ease-out;
-	width: 250px;
+	width: 300px;
 	display: flex;
 	flex-direction: column;
 	margin: 8px;
@@ -195,9 +194,6 @@ section, footer {
 
 .project h2 a {
 	color: #fff;
-}
-
-.project h2 a {
 	text-decoration: none;
 	transition: color .1s;
 }
@@ -207,9 +203,23 @@ section, footer {
 }
 
 .project p {
-	flex-grow: 2;
 	padding: 0 8px 0 8px;
 	color: #fff;
+}
+
+.project img {
+	max-width: 80%;
+	margin: 0 auto;
+	margin-bottom: 8px;
+	height: auto;
+	border-radius: 0.5vmin; /* todo: replace */
+	box-shadow: 0px 0px 9px 3px rgba(0, 0, 0, 0.1);
+}
+
+.imagecontainer {
+	flex-grow: 1;
+	display: flex;
+	align-items: center;
 }
 
 .project span {
@@ -259,14 +269,12 @@ footer {
 	align-items: center;
 	justify-content: space-between;
 	color: grey;
-}
-
-footer h3 {
-	margin: 0;
+	flex-wrap: wrap;
+	padding: 16px;
 }
 
 footer p {
-	line-height: 24px;
+	margin: 0;
 }
 
 #kao:before { content: attr(before); }
@@ -333,7 +341,7 @@ footer p {
 @media (prefers-color-scheme: light) {
 	:root {
 		--accent-colour: #6339cb;
-		--alpha-accent-background: #ffffffe0;
+		--alpha-accent-background: #fffffff0;
 		--border: #dadada;
 	}
 
@@ -345,8 +353,12 @@ footer p {
 		background-color: #f5f5f5a0;
 	}
 
+	.content, .home {
+		box-shadow: 0px 0px 9px 3px rgba(0, 0, 0, 0.3);
+	}
+
 	.project:hover {
-		box-shadow: 0px 0px 9px 3px rgba(0, 0, 0, 0.2);
+		box-shadow: 0px 0px 9px 3px rgba(0, 0, 0, 0.1);
 		border-left: 2px solid #e0e0e0;
 		border-top: 2px solid #e0e0e0;
 		border-right: 2px solid #e0e0e0;
@@ -364,9 +376,13 @@ footer p {
 	.postdate {
 		background-color: #f3f3f3;
 	}
+
+	body:before {
+		filter: blur(8px) brightness(3.0) !important;
+	}
 }
 
-@media screen and (min-width: 700px) and (min-height: 599px) { /* don't put a background on mobile */
+@media screen and (min-width: 701px) and (min-height: 599px) { /* don't put a background on mobile */
 	body:before {
 		height: 100%;
 		content: "";
@@ -381,15 +397,15 @@ footer p {
 		filter: blur(8px) hue-rotate(-10deg);
 	}
 }
+
 @media screen and (max-height: 737px) {
-	.bottomnote {
-		display: none;
-	}
+	.bottomnote { display: none; }
 }
 
 @media screen and (prefers-color-scheme: light) {
 	@media screen and (max-width: 700px), (max-height: 599px) {
 		:root { --background: #f1f1f1; --accent-background: #fff } /* only light background on light theme mobile page.. D: */
 		.content { box-shadow: 0 0 20px 1px #999 }
+		.home { box-shadow: none; }
 	}
 }

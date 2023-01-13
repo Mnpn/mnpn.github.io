@@ -2,7 +2,7 @@
 layout: default
 kaomoji: ["(^ヮ^)", "(*≧ω≦*)", "(* ^ ω ^)", "(^ᴗ^)", "(⌒▽⌒)☆", "(^ω^)", "(＾▽＾)", "♡(^ᴗ^)", "(*＾ワ＾*)"]
 ---
-<section class="home">
+<aside class="home">
 	<div class="aboutme">
 		<div class="title">
 			<div class="line left-side"></div>
@@ -21,7 +21,7 @@ kaomoji: ["(^ヮ^)", "(*≧ω≦*)", "(* ^ ω ^)", "(^ᴗ^)", "(⌒▽⌒)☆", 
 		<img src="/assets/gspfp.jpeg" alt="Space profile picture">
 		<p>&#8212; &#183; &#8212;</p>
 	</div>
-</section>
+</aside>
 
 <div class="content">
 	<section>
@@ -35,14 +35,23 @@ kaomoji: ["(^ヮ^)", "(*≧ω≦*)", "(* ^ ω ^)", "(^ᴗ^)", "(⌒▽⌒)☆", 
 			{% for local_repo in site.data.repositories %}
 				{% for repo in gh_repos %}
 					{% if repo.name contains local_repo %}
-						<div class="project {{ repo.language }}">
+						<div class="project {{ repo.language }} main-project">
 							<h2><a href="{{ repo.html_url }}">{{ repo.name }}</a></h2>
 							<p>{{ repo.description }}</p>
+							<picture class="imagecontainer">
+								<source srcset="/assets/projects/{{ local_repo | downcase }}-light.avif" media="(prefers-color-scheme: light)" type="image/avif">
+								<source srcset="/assets/projects/{{ local_repo | downcase }}.avif" type="image/avif">
+								<source srcset="/assets/projects/{{ local_repo | downcase }}-light.png" media="(prefers-color-scheme: light)">
+								<source srcset="/assets/projects/{{ local_repo | downcase }}.png">
+								<img src="assets/projects/{{ local_repo | downcase }}.png" alt="{{ local_repo }}'s UI">
+							</picture>
 							<span>{{ repo.language }}</span>
 						</div>
 					{% endif %}
 				{% endfor %}
 			{% endfor %}
+		</div>
+		<div class="projects">
 			{% for repo in site.data.other_repos %}
 				<div class="project {{ repo.language }}">
 					<h2><a href="{{ repo.url }}">{{ repo.name }}</a></h2>

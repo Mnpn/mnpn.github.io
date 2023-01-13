@@ -3,7 +3,7 @@
   language: HTML
   description: "The website for iSH, the Linux shell for iOS! Have a look at its <a href=\"https://ish.app\">homepage</a>."
 
-- url: https://github.com/discordconsole-team/DiscordConsole
-  name: DiscordConsole
-  language: Go
-  description: "Control your Discord and Discord bot accounts (webhooks, too!) through the command line."
+- url: https://github.com/Mnpn/mnpn.github.io
+  name: Website
+  language: HTML
+  description: "This very website you're looking at right now!"
