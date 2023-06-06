@@ -10,10 +10,6 @@
   title: "Mastodon"
   external: false
 
-- url: "discord://discordapp.com/users/172030506970382337\" aria-label=\"Discord"
-  title: "" # css manages
-  external: false
-
 - url: "https://anilist.co/user/Mnpn"
   title: "Anime List"
   external: false

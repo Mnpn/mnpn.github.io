@@ -131,9 +131,6 @@ section, aside {
 	margin-top: 0;
 }
 
-.aboutme a[href$="172030506970382337"]:before { content: "Discord"; }
-.aboutme a[href$="172030506970382337"]:hover:before { content: "Mnpn#5043"; }
-
 .home img {
 	display: block;
 	width: 128px;
