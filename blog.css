@@ -41,7 +41,7 @@ a:hover {
 }
 
 header {
-	background: linear-gradient(180deg, rgba(255, 255, 255, 0.067), rgba(0,0,0,0));
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0.067), rgba(0, 0, 0, 0));
 	height: calc(var(--header-height) - var(--header-padding) * 2);
 	padding: var(--header-padding);
 }

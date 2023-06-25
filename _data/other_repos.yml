@@ -3,6 +3,11 @@
   language: HTML
   description: "The website for iSH, the Linux shell for iOS! Have a look at its <a href=\"https://ish.app\">homepage</a>."
 
+- url: https://rfa.mnpn.dev
+  name: RSS for AniList
+  language: Python
+  description: "Get RSS feeds from AniList profiles. <a href=\"https://rfa.mnpn.dev/Mnpn\">Here's mine</a>, as an example."
+
 - url: https://github.com/Mnpn/mnpn.github.io
   name: Website
   language: HTML

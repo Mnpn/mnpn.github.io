@@ -153,6 +153,7 @@ section, aside {
 .HTML:hover 		{ color: #e34c26; border-bottom: 2px solid #e34c26 }
 .Java:hover 		{ color: #b07219; border-bottom: 2px solid #b07219 }
 .JavaScript:hover 	{ color: #f1e05a; border-bottom: 2px solid #f1e05a }
+.Python:hover		{ color: #3572a5; border-bottom: 2px solid #3572a5 }
 .Ruby:hover 		{ color: #701516; border-bottom: 2px solid #701516 }
 .Rust:hover 		{ color: #dea584; border-bottom: 2px solid #dea584 }
 .Shell:hover 		{ color: #89e051; border-bottom: 2px solid #89e051 }
