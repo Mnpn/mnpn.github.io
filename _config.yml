@@ -5,7 +5,6 @@ description: >- # this means to ignore newlines until "baseurl:"
   Mnpn's website and blog containing projects and other information.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://mnpn.dev" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: Blinieth
 github_username: Mnpn
 repository: Mnpn/mnpn.github.io
 permalink: "/blog/:title"
